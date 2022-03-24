@@ -6,18 +6,18 @@
      v-on:pageplus="pageUpdate"
      v-on:pageminus="pageUpdate"
      :pageNo="pageNo"
+     :maxPages="maxPages"
       >
     </custom-header>
     <div class="divider">
         &nbsp;
     </div>
-    <main>
-        <books 
-        :searchQuery="searchQuery"
-        :pageNo="pageNo"
-        >
-        </books>
-    </main>
+      <books 
+      :searchQuery="searchQuery"
+      :pageNo="pageNo"
+      v-on:newPageInfo="maxPagesUpdate"
+      >
+      </books>
   </div>
 </template>
 
@@ -52,8 +52,9 @@ export default {
       console.log(this);
     },
     catchSearch(searchTerm){
-            this.searchQuery = searchTerm;
-            console.log(searchTerm);
+      this.pageNo=1;
+      this.searchQuery = searchTerm;
+      console.log(searchTerm);
     },
     pageUpdate(value){
       if(value){
@@ -65,10 +66,13 @@ export default {
         console.log("page minus");
       }
     },
+    maxPagesUpdate(maxPages){
+      this.maxPages=maxPages;
+    }
   },
   created() {
-    console.log("created")
-    console.log(this);
+    //console.log("created")
+    //console.log(this);
     //this.testMixin();
   },
   mounted() {

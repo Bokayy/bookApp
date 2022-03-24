@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>Vježba 1 - API</h1>
+        <h1>Vježba 2 - API - Vue.js Edition</h1>
         <div class="break">&nbsp;</div>
 
         <div v-show="showPagination" class="pageIndicator">
@@ -42,10 +42,12 @@ export default {
             }
         },
         pageplus(){
+            if(this.pageNo!==this.maxPages){
             this.$emit('pageplus',true);
+            }
         },
         pageminus(){
-            if (this.pageNo>0){
+            if (this.pageNo>1){
             this.$emit('pageminus',false);
             }
         }

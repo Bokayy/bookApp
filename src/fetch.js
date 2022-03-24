@@ -6,7 +6,7 @@
             let response = await fetch(url);
             return await response.json()/*.then((data) =>console.log(data)); */
         }catch (error){
-            console.log(error,'color: orange; font-weight: bold;');
+            console.log("%cerror",'color: orange; font-weight: bold;');
         }
     }
 
