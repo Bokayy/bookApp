@@ -3,7 +3,7 @@
     <div id="api">
         <Item v-for="book in responseData.books" :key="book.isbn13"
         :Image="book.image"
-        :Name="book.isbn13"
+        :Name="book.title"
         :Subtitle="book.subtitle"
         :ISBN="book.isbn13"
         :Price="book.price"

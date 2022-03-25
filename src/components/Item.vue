@@ -52,15 +52,15 @@ export default {
             axios
             .get(`https://api.itbook.store/1.0/books/${this.ISBN}`)
             .then (response => (
-                console.log(response)
-                /* this.author = response.author, */
-                /* this.publisher = response.publisher, */
-                /* this.description =response.description */));
+            console.log(response),
+            this.author = response.data.authors,
+            this.publisher = response.data.publisher,
+            this.description = response.data.desc
+            ));
         }
     }
 }
 </script>
 
 <style>
-
 </style>
