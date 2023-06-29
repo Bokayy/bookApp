@@ -90,6 +90,8 @@ body #app header .search input {
   height: 4rem;
   color: black;
   font-size: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 1rem;
 }
 body #app header .search button {
   border: 3px solid rgb(197, 164, 120);
@@ -119,10 +121,15 @@ body #app main #api {
   flex-direction: row;
   align-items: left;
   flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 80vw;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  background-color: white;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 body #app main #api .item {
   display: flex;
@@ -133,7 +140,6 @@ body #app main #api .item {
   min-width: 60rem;
   min-height: 45rem;
   max-height: 42rem;
-  margin-right: 6rem;
   border: double 0.5rem rgb(197, 164, 120);
   outline: black 6px;
 }
