@@ -175,7 +175,8 @@ body{
                     } 
                     
                     .extra{
-                        background-color: rgb(143,208,202);
+                        background-color: rgba(132, 199, 192, 0.95);
+                        backdrop-filter: blur(10rem);
                         -webkit-box-orient: horizontal;
                         -webkit-box-direction: normal;
                         font-size: 3rem;
