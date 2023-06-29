@@ -135,20 +135,20 @@ body #app main #api .item {
   display: flex;
   flex-direction: row;
   font-size: 3rem;
-  margin: 1rem;
   max-width: 60rem;
   min-width: 60rem;
   min-height: 45rem;
   max-height: 42rem;
   border: double 0.5rem rgb(197, 164, 120);
   outline: black 6px;
+  margin-bottom: 6rem;
 }
-body #app main #api .item > div {
+body #app main #api .item > title {
   flex-basis: 50%;
   min-width: 50%;
   max-width: 50%;
 }
-body #app main #api .item > div > img {
+body #app main #api .item > title > img {
   margin-bottom: 1.5rem;
   cursor: pointer;
   min-width: 90%;
@@ -161,7 +161,7 @@ body #app main #api .item > div > img {
 body #app main #api .item .extra {
   background-color: rgb(143, 208, 202);
   font-size: 3rem;
-  margin: -0.1rem 0rem 0rem -29.5rem;
+  margin: -0.1rem 0rem 0rem -30rem;
   max-width: 50%;
   min-width: 50%;
   z-index: 2;

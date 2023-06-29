@@ -149,7 +149,6 @@ body{
                     display: flex;
                     flex-direction:row;
                     font-size:3rem;
-                    margin: 1rem;
                     max-width: 60rem;
                     min-width: 60rem;
                     min-height: 45rem;
@@ -157,8 +156,9 @@ body{
                     //margin-right: 6rem;
                     border: double 0.5rem rgb(197, 164, 120);
                     outline:black 6px;
+                    margin-bottom:6rem;
 
-                    >div{
+                    >title{
                         flex-basis: 50%;
                         min-width: 50%;
                         max-width: 50%;
@@ -179,7 +179,7 @@ body{
                         -webkit-box-orient: horizontal;
                         -webkit-box-direction: normal;
                         font-size: 3rem;
-                        margin: -0.1rem 0rem 0rem -29.5rem;
+                        margin: -0.1rem 0rem 0rem -30rem;
                         max-width: 50%;
                         min-width: 50%;
                         //min-height: 39rem;
