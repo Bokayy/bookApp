@@ -14,34 +14,37 @@
                 </h1>
                 <br>
                 <p>
-                    Podnaslov: 
+                    <u>Subtitle:</u>
                     <br>
                     {{Subtitle}} 
                 </p>
                 <br>
                 <p class="ISBN">
-                    ISBN:
+                    <u>ISBN:</u>
                     <br>
                      {{ISBN}}
                 </p>
                 <br>
                 <p>
-                    Cijena:
+                    <u>Price:</u>
                     <br>
                     {{Price}}
                 </p>
             </div>
             <div v-show="hover || active" class="extra">
                 <p>
-                Author: <br>
+                <u>Author:</u> 
+                <br>
                 {{author}}
                 </p>
                 <p>
-                Publisher: <br>
+                <u>Publisher:</u>
+                <br>
                 {{publisher}}
                 </p>
                 <p id="description">
-                Description: <br>
+                <u>Description:</u>
+                <br>
                 {{description}}
                 </p>
             </div>
