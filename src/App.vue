@@ -18,11 +18,23 @@
       v-on:newPageInfo="maxPagesUpdate"
       >
       </books>
+      <div class="divider">
+        &nbsp;
+      </div>
+      <custom-footer
+      :showPagination="showPagination"
+      v-on:pageplus="pageUpdate"
+      v-on:pageminus="pageUpdate"
+      :pageNo="pageNo"
+      :maxPages="maxPages"
+      >
+    </custom-footer>
   </div>
 </template>
 
 <script>
 import CustomHeader from './components/CustomHeader.vue';
+import CustomFooter from './components/CustomFooter.vue';
 import Book from './components/Books.vue';
 //import testMixin from './testmixin.js';
 
@@ -31,6 +43,7 @@ export default {
   //mixins:[testMixin],
   components: {
     'custom-header' : CustomHeader,
+    'custom-footer' : CustomFooter,
     'books' : Book,
   },
   

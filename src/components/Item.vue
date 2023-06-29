@@ -1,35 +1,49 @@
 <template>
   <div class ="item">
-            <p>
-                <img :src="Image"
-                @mouseover="hover=true"
-                @mouseleave="hover=false"
-                @click="renderExtra"
-                />
-            </p>
+                <div>
+                    <img :src="Image"
+                    @mouseover="hover=true"
+                    @mouseleave="hover=false"
+                    @click="renderExtra"
+                    alt = "Book Cover"
+                    />
+                </div>
             <div class="title">
                 <h1>
-                    Ime knjige:{{Name}}
+                    Ime knjige: 
+                    {{Name}}
                 </h1>
+                <br>
                 <p>
-                    Podnaslov:{{Subtitle}} 
+                    Podnaslov: 
+                    <br>
+                    {{Subtitle}} 
                 </p>
+                <br>
                 <p class="ISBN">
-                    ISBN:{{ISBN}}
+                    ISBN:
+                    <br>
+                     {{ISBN}}
                 </p>
+                <br>
                 <p>
-                    Cijena:{{Price}}
+                    Cijena:
+                    <br>
+                    {{Price}}
                 </p>
             </div>
-            <div v-show="hover" class="extra">
+            <div v-show="hover || active" class="extra">
                 <p>
-                author: {{author}}
+                Author: <br>
+                {{author}}
                 </p>
                 <p>
-                publisher:{{publisher}}
+                Publisher: <br>
+                {{publisher}}
                 </p>
                 <p id="description">
-                description: {{description}}
+                Description: <br>
+                {{description}}
                 </p>
             </div>
         </div>
@@ -42,6 +56,7 @@ export default {
     data(){
         return {
             hover: false,
+            active: false,
             author: '',
             publisher: '',
             description:'',
@@ -52,11 +67,12 @@ export default {
             axios
             .get(`https://api.itbook.store/1.0/books/${this.ISBN}`)
             .then (response => (
-            console.log(response),
+            console.log('renderExtra:',response),
             this.author = response.data.authors,
             this.publisher = response.data.publisher,
             this.description = response.data.desc
             ));
+            this.active = !this.active;
         }
     }
 }

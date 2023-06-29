@@ -2,9 +2,9 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -33,56 +33,34 @@ a {
 body {
   background-color: black;
 }
-
 body #app header {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   max-height: 10rem;
   max-width: 100%;
 }
-
 body #app header h1 {
   color: white;
   font-size: 3.5rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 3rem;
   margin-left: 4rem;
   margin-bottom: 1rem;
 }
-
 body #app header .break {
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
+  flex-basis: 0;
   width: 0%;
 }
-
 body #app header .pageIndicator {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   margin-left: 2rem;
   margin-top: 2rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-
 body #app header .pageIndicator .fa-solid {
   font-size: 5rem;
   cursor: pointer;
@@ -91,16 +69,13 @@ body #app header .pageIndicator .fa-solid {
   font-style: normal;
   padding: 1.5rem;
 }
-
 body #app header .pageIndicator .pageNo {
   font-size: 3rem;
 }
-
 body #app header .search .wrap {
   margin-top: 3rem;
   margin-left: 1rem;
 }
-
 body #app header .search input {
   border: 3px solid yellow;
   border-top-left-radius: 3px;
@@ -108,7 +83,6 @@ body #app header .search input {
   height: 4rem;
   color: black;
 }
-
 body #app header .search button {
   border: 3px solid yellow;
   margin-left: -0.3rem;
@@ -119,92 +93,82 @@ body #app header .search button {
   width: 4rem;
   cursor: pointer;
 }
-
 body #app .divider {
   background-color: yellow;
   min-width: 100%;
   min-height: 1.5rem;
 }
-
 body #app main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 body #app main #api {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  align-items: left;
+  flex-wrap: wrap;
   max-width: 80vw;
   margin-top: 10rem;
 }
-
 body #app main #api .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   font-size: 3rem;
-  border: 1px solid #eee;
   margin: 1rem;
   max-width: 60rem;
+  min-width: 60rem;
   min-height: 45rem;
   max-height: 42rem;
 }
-
-body #app main #api .item .title p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+body #app main #api .item::hover {
+  border: 1px solid #eee;
 }
-
+body #app main #api .item > div {
+  flex-basis: 50%;
+  min-width: 50%;
+  max-width: 50%;
+}
+body #app main #api .item > div > img {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  min-width: 90%;
+  max-width: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 body #app main #api .item .extra {
   background-color: orange;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
   font-size: 3rem;
-  border: 1px solid #eee;
-  margin: -0.1rem 0rem 0rem -21.3rem;
-  max-width: 60rem;
-  min-width: 25rem;
-  min-height: 39rem;
-  max-height: 47rem;
+  margin: -0.1rem 0rem 0rem -30rem;
+  max-width: 50%;
+  min-width: 50%;
   z-index: 2;
-  display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 5%;
+  animation-name: example;
+  animation-duration: 1s;
 }
-
+@keyframes example {
+  from {
+    transform: translate(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
 body #app main #api .item .extra p {
   font-size: 2rem !important;
   margin: 1rem !important;
 }
-
 body #app main #api .item .extra #description {
   font-size: 0.5rem;
 }
-
 @media screen and (max-width: 940px) {
   body #app main #api .item p > img {
     height: 20rem;
@@ -213,17 +177,15 @@ body #app main #api .item .extra #description {
     margin-top: 10rem;
   }
 }
-
 body #app main #api .item .title {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  flex-basis: 50%;
 }
-
 body #app main #api .item .title h1 {
   text-decoration: underline;
   font-size: 2rem;
 }
-
 body #app main #api .item .title p {
   font-size: 1.8rem;
   text-decoration: none;
@@ -234,14 +196,10 @@ body #app main #api .item .title p {
     font-size: 40% !important;
   }
   header {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
     margin-bottom: 20rem !important;
   }
   #api {
     max-width: 10rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
