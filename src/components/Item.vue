@@ -10,7 +10,6 @@
                 </div>
             <div class="title">
                 <h1>
-                    Ime knjige: 
                     {{Name}}
                 </h1>
                 <br>

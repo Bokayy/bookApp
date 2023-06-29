@@ -1,11 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@font-face {
+    font-family: 'abnes';
+	src: url('../assets/abnes.eot'); /* IE9 Compat Modes */
+	src: url('../assets/abnes.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     //url('../assets/abnes.woff') format('woff'), /* Modern Browsers */
+	     url('../assets/abnes.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+
+
 *{
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(197, 164, 120);
+    font-family: math;
 }
 
 html{
@@ -34,19 +43,20 @@ a{
 
 
 body{
-    background-color: black;
+    background-color: white;
     #app{
         header{
             align-items: center;
             justify-content: center;
+            align-items: center;
             display: flex;
             flex-direction: row;
             max-height: 10rem;
             max-width: 100%;
             h1{
-                color: white;
+                color: rgb(197, 164, 120);
                 font-size:3.5rem;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-family: "abnes"; 
                 margin-top:3rem;
                 margin-left:4rem;
                 margin-bottom: 1rem;
@@ -63,10 +73,15 @@ body{
                 margin-left:2rem;
                 margin-top: 2rem;
                 font-family: 'Courier New', Courier, monospace;
+
+                >p{
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+
                 .fa-solid{
                     font-size:5rem;
                     cursor: pointer;
-                    color:white;
+                    color:rgb(197, 164, 120);
                     font-family: FontAwesome !important;
                     font-style: normal;
                     padding:1.5rem;
@@ -80,19 +95,20 @@ body{
                 .wrap{
                     margin-top: 3rem;
                     margin-left:1rem;
+                    display: inline-flex;
                 }
 
                 input{
-                    border: 3px solid yellow;
+                    border: 3px solid rgb(197, 164, 120);
                     border-top-left-radius:3px;
                     border-bottom-left-radius:3px;
                     height:4rem;
-                    color: black;
+                    color: black;font-size: 3rem;
                 }
                 button{
-                    border: 3px solid yellow;
+                    border: 3px solid rgb(197, 164, 120);
                     margin-left: -0.3rem;
-                    background-color: yellow;
+                    background-color: rgb(197, 164, 120);
                     border-top-right-radius: 3px;
                     border-bottom-right-radius:3px ;
                     height: 4rem;
@@ -102,7 +118,7 @@ body{
             }
         }
         .divider{
-            background-color:yellow;
+            background-color:rgb(197, 164, 120);
             min-width: 100%;
             min-height: 1.5rem;
         }
@@ -116,6 +132,7 @@ body{
                 flex-wrap: wrap;
                 max-width:80vw;
                 margin-top: 10rem;
+                margin-bottom: 10rem;
 
                 .item{
                     display: flex;
@@ -126,6 +143,9 @@ body{
                     min-width: 60rem;
                     min-height: 45rem;
                     max-height: 42rem;
+                    margin-right: 6rem;
+                    border: double 0.5rem rgb(197, 164, 120);
+                    outline:black 6px;
 
                     &::hover{
                         border: 1px solid #eee;
@@ -148,11 +168,11 @@ body{
                     } 
                     
                     .extra{
-                        background-color: orange;
+                        background-color: rgb(143,208,202);
                         -webkit-box-orient: horizontal;
                         -webkit-box-direction: normal;
                         font-size: 3rem;
-                        margin: -0.1rem 0rem 0rem -30rem;
+                        margin: -0.1rem 0rem 0rem -29.5rem;
                         max-width: 50%;
                         min-width: 50%;
                         //min-height: 39rem;
@@ -166,12 +186,30 @@ body{
                         animation-name: example;
                         animation-duration: 1s;
 
+                        /* width */
+                        ::-webkit-scrollbar {
+                            width: 20px;
+                        }
+                        
+                        /* Track */
+                        ::-webkit-scrollbar-track {
+                            box-shadow: inset 0 0 5px grey;
+                            border-radius: 10px;
+                        }
+                        
+                        /* Handle */
+                        ::-webkit-scrollbar-thumb {
+                            background: red;
+                            border-radius: 10px;
+                        }
+
                         @keyframes example {
                             from {transform: translate(10%); opacity: 0}
                             to {transform: translate(0%); opacity: 1}
                           }
 
-                        p{                     
+                        p{    
+                        color: white;                 
                         font-size: 2rem !important;
                         margin: 1rem !important;
                         }

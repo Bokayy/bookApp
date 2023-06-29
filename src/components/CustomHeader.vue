@@ -1,11 +1,11 @@
 <template>
     <header>
-        <h1>Vježba 2 - API - Vue.js Edition</h1>
+        <h1>VJEZBA 2 - API</h1>
         <div class="break">&nbsp;</div>
 
         <div v-show="showPagination" class="pageIndicator">
             <i @click="pageminus" class="fa-solid fa-angle-left" id="btnLeft"></i>
-            <p class="pageNo">Page:{{pageNo}}/{{maxPages}}</p>
+            <p class="pageNo">{{pageNo}}/{{maxPages}}</p>
             <i @click="pageplus" class="fa-solid fa-angle-right" id="btnRight"></i>
         </div>
 
