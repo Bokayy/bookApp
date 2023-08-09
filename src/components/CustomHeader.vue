@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>VJEZBA 2 - API</h1>
+        <h1>IT Books Search</h1>
         <div class="break">&nbsp;</div>
 
         <div v-show="showPagination" class="pageIndicator">
@@ -11,7 +11,7 @@
 
             <div class="search">
                 <div class="wrap">
-               <input @keyup="keymonitor" v-model="searchQuery" class="searchTerm" placeholder="What are you looking for?" id="test">
+               <input @keyup="keymonitor" v-model="searchQuery" class="searchTerm" placeholder="Anything IT related?" id="test">
                <button @click="emitSearchTerm" type="submit" class="searchButton">
                  <i class="fa fa-search"></i>
               </button>
