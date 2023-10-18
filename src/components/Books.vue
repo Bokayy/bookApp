@@ -15,7 +15,6 @@
 
 <script>
 import axios from 'axios';
-import {getBooks} from '../fetch.js';
 import Item from './Item.vue';
 
 export default {
@@ -23,7 +22,6 @@ export default {
         'Item':Item,
     },
     props: ['searchQuery','pageNo',],
-    mixins:[getBooks()],
     data(){
     return {
         maxPages:Number(),
