@@ -134,7 +134,7 @@ body{
                 flex-direction: row;
                 align-items: left;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 max-width:80vw;
                 //margin-top: 10rem;
                 padding-top: 10rem;
@@ -143,10 +143,11 @@ body{
                 background-color: rgb(255,255,255,0.1);
                 padding-left: 2rem;
                 padding-right: 2rem;
-                backdrop-filter: blur(6px);
+                backdrop-filter: blur(1px);
 
                 .item{
                     display: flex;
+                    align-items: center;
                     flex-direction:row;
                     font-size:3rem;
                     max-width: 60rem;
@@ -157,21 +158,24 @@ body{
                     border: double 0.5rem rgb(197, 164, 120);
                     outline:black 6px;
                     margin-bottom:6rem;
+                    background-color: rgba(197, 164, 120, 0.3);
+                    text-shadow: 1px 1px 1px black;
+
+                    >img{
+                        margin-bottom: 1.5rem;
+                        cursor: pointer;
+                        min-width: 90%;
+                        max-width: 90%;
+                        position: relative;
+                        top:50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%) ;
+                    }
 
                     >title{
                         flex-basis: 50%;
                         min-width: 50%;
                         max-width: 50%;
-                        >img{
-                            margin-bottom: 1.5rem;
-                            cursor: pointer;
-                            min-width: 90%;
-                            max-width: 90%;
-                            position: relative;
-                            top:50%;
-                            left: 50%;
-                            transform: translate(-50%,-50%) ;
-                        }
                     } 
                     
                     .extra{
@@ -183,8 +187,7 @@ body{
                         margin: -0.1rem 0rem 0rem -30rem;
                         max-width: 50%;
                         min-width: 50%;
-                        //min-height: 39rem;
-                        //max-height: 47rem;
+                        min-height: 100%;
                         z-index: 2;
                         -ms-flex-direction: column;
                         flex-direction: column;
@@ -234,10 +237,10 @@ body{
                         flex-basis: 50%;
                         h1{
                             text-decoration: underline;
-                            font-size: 2rem;
+                            font-size: 2.5rem;
                         }
                         p{
-                            font-size:1.8rem;
+                            font-size:2rem;
                             text-decoration: none;
                         }
                     }
