@@ -37,15 +37,13 @@ export default {
     watch:{
         searchQuery(){
             console.log("Search Query watcher activated");
-            axios
-            .get(`https://api.itbook.store/1.0/search/${this.searchQuery}/${this.pageNo}`)
+            axios.get(`http://localhost:8080/books/search/${this.searchQuery}`)
             .then(response => (this.responseData = response.data,
             this.maxPages = response.data.total))
         },
         pageNo(){
             console.log("Page Number watcher activated");
-            axios
-            .get(`https://api.itbook.store/1.0/search/${this.searchQuery}/${this.pageNo}`)
+            axios.get(`http://localhost:8080/books/search/${this.searchQuery}`)
             .then(response => (this.responseData = response.data, this.maxPages = response.data.total))
         },
         maxPages(){

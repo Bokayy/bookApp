@@ -67,7 +67,7 @@ export default {
     catchSearch(searchTerm){
       this.pageNo=1;
       this.searchQuery = searchTerm;
-      console.log(searchTerm);
+      //console.log(searchTerm);
     },
     pageUpdate(value){
       if(value){
