@@ -130,6 +130,8 @@ body #app main #api {
   padding-right: 2rem;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 body #app main #api .item {
   display: flex;
