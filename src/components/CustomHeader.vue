@@ -11,7 +11,7 @@
 
             <div class="search">
                 <div class="wrap">
-               <input @keyup="keymonitor" v-model="searchQuery" class="searchTerm" placeholder="Anything IT related?" id="test">
+               <input @keyup="keymonitor" v-model="searchQuery" class="searchTerm" placeholder="Anything IT related?" id="test" type="text" autocomplete="off">
                <button @click="emitSearchTerm" type="submit" class="searchButton">
                  <i class="fa fa-search"></i>
               </button>
