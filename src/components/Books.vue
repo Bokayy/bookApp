@@ -37,12 +37,12 @@ export default {
     watch:{
         searchQuery(){
             console.log("Search Query watcher activated");
-            axios.get(`http://localhost:2339/books/search`,{ params: {q: this.searchQuery, q2: 0} })
+            axios.get(`http://boris-milojevic.from.hr/books/search`,{ params: {q: this.searchQuery, q2: 0} })
             .then(response => (this.responseData = response.data, this.maxPages = response.data.total))
         },
         pageNo(){
             console.log("Page Number watcher activated");
-            axios.get(`http://localhost:2339/books/search`,{ params: {q: this.searchQuery, q2: this.pageNo} })
+            axios.get(`http://boris-milojevic.from.hr/books/search`,{ params: {q: this.searchQuery, q2: this.pageNo} })
             .then(response => (this.responseData = response.data, this.maxPages = response.data.total))
         },
         maxPages(){
