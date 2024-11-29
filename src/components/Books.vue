@@ -21,28 +21,29 @@ export default {
     components:{
         'Item':Item,
     },
-    props: ['searchQuery','pageNo',],
+    props: ['searchQuery','pageNo'],
     data(){
     return {
         maxPages:Number(),
         responseData:'',
-        maxPagesPlaceholder: this.maxPages
+        maxPagesPlaceholder: this.maxPages,
+        apiUrl: import.meta.env.VITE_API_URL, //create an .env.production file who's value is your server address to use this code in prod
         }
     },
     methods:{
         writeResponseToData(data){ //writing directly to data from out searchQuery method doesn't work for some reason
             this.api_info = data;
-        },
+        }
     },
     watch:{
         searchQuery(){
             console.log("Search Query watcher activated");
-            axios.get(`http://boris-milojevic.from.hr/books/search`,{ params: {q: this.searchQuery, q2: 0} })
+            axios.get(`${this.apiUrl}/books/search`,{ params: {q: this.searchQuery, q2: 0} })
             .then(response => (this.responseData = response.data, this.maxPages = response.data.total))
         },
         pageNo(){
             console.log("Page Number watcher activated");
-            axios.get(`http://boris-milojevic.from.hr/books/search`,{ params: {q: this.searchQuery, q2: this.pageNo} })
+            axios.get(`${this.apiUrl}/books/search`,{ params: {q: this.searchQuery, q2: this.pageNo} })
             .then(response => (this.responseData = response.data, this.maxPages = response.data.total))
         },
         maxPages(){

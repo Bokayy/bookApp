@@ -84,9 +84,7 @@ export default {
     }
   },
   created() {
-    //console.log("created")
-    //console.log(this);
-    //this.testMixin();
+    //console.log("Vite API URL", import.meta.env.VITE_API_URL); //testing
   },
   mounted() {
     console.log("App mounted");
