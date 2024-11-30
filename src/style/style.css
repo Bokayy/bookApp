@@ -36,7 +36,7 @@ a {
 }
 
 body {
-  background-color: white;
+  background-color: #2D2B28;
 }
 body #app header {
   display: flex;
@@ -125,11 +125,11 @@ body #app main #api {
   max-width: 80vw;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(58, 51, 45, 0.1);
   padding-left: 2rem;
   padding-right: 2rem;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
@@ -138,8 +138,7 @@ body #app main #api .item {
   align-items: center;
   flex-direction: row;
   font-size: 3rem;
-  max-width: 60rem;
-  min-width: 60rem;
+  width: 60rem;
   min-height: 45rem;
   max-height: 42rem;
   border: double 0.5rem rgb(197, 164, 120);
@@ -226,14 +225,26 @@ body #app main #api .item .title p {
 }
 
 @media screen and (max-width: 940px) {
-  html {
-    font-size: 40% !important;
-  }
   header {
     flex-direction: column !important;
     margin-bottom: 20rem !important;
   }
-  #api {
-    max-width: 10rem;
+  .item {
+    flex-direction: column !important;
+    max-height: unset !important;
+    min-height: unset !important;
+  }
+  .item > .title {
+    width: 80% !important;
+  }
+  .item > .extra {
+    margin: unset !important;
+    max-width: unset !important;
+    min-width: unset !important;
+    min-height: unset !important;
+    overflow: unset !important;
+  }
+  .item > .extra > p {
+    color: #2D2B28 !important;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -43,7 +43,7 @@ a{
 
 
 body{
-    background-color: white;
+    background-color: #2D2B28;
     #app{
         header{
             display:flex;
@@ -140,10 +140,10 @@ body{
                 padding-top: 10rem;
                 padding-bottom: 10rem;
                 //margin-bottom: 10rem;
-                background-color: rgb(255,255,255,0.1);
+                background-color: rgba(58, 51, 45, 0.1);
                 padding-left: 2rem;
                 padding-right: 2rem;
-                backdrop-filter: blur(1px);
+                backdrop-filter: blur(1.5px);
                 column-gap: 2rem;
 
                 .item{
@@ -151,8 +151,7 @@ body{
                     align-items: center;
                     flex-direction:row;
                     font-size:3rem;
-                    max-width: 60rem;
-                    min-width: 60rem;
+                    width: 60rem;
                     min-height: 45rem;
                     max-height: 42rem;
                     //margin-right: 6rem;
@@ -253,15 +252,31 @@ body{
 
 
   @media screen and (max-width:940px) {
-      html{
-          font-size:40% !important;
-      }
       header{
           flex-direction: column !important;
           margin-bottom:20rem !important;
       }
-      #api{
-          max-width:10rem;
+
+      .item{
+        flex-direction: column !important;
+        max-height: unset !important;
+        min-height: unset !important;
+
+        > .title {
+            width: 80% !important;
+        }
+
+        > .extra {
+            margin: unset !important;
+            max-width: unset !important;
+            min-width: unset !important;
+            min-height: unset !important;
+            overflow: unset !important;
+            
+            > p {
+                color: #2D2B28 !important;
+            }
+        }
       }
   }
 
